@@ -1,0 +1,23 @@
+.optionList{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.optionList__img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.optionList__container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+.optionList__icon{
+  font-size: 20px;
+}

@@ -1,0 +1,29 @@
+.tableOptions{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.tableOptions__header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  border-bottom: 3px solid var(--color-primary-orange);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.tableOptions__icon{
+  font-size: 24px;
+}
+.tableOptions__body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
