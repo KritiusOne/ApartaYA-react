@@ -1,5 +1,8 @@
+:root{
+  --color-bg-light:  #F5F5F5;
+}
 .Inicio{
-  background-color: #F5F5F5;
+  background-color: var(--color-bg-light);
   margin-top: 70px;
   padding-top: 20px;
 }

@@ -22,10 +22,10 @@ export function Header() {
             </Link>
           </li>
           <li className='header__nav__list__element element--mensajes'>
-            <Button classNameButton={"header__nav__list__element__button"}>
+            <Link to={"/perfil"} classNameButton={"header__nav__list__element__button"}>
               <AiOutlineComment className='icon--msg' />
               <span className='list--element__title title--msg'>Mensajes</span>
-            </Button>
+            </Link>
           </li>
           <li className='header__nav__list__element element--notificaciones'>
             <Button classNameButton={"header__nav__list__element__button"}>
