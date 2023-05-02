@@ -1,14 +1,17 @@
 import logo from '../src/assets/logo-transparent.png'
 import Input from './components/input/Input'
-import { Link } from 'react-router-dom'
-import { Registrarse } from './pages/registrarse/Registrarse'
+import Button from './components/button/Button'
+import { Link, useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { LoginContext } from './context/LoginContext'
+import { users } from './utils/dataFake'
 import './App.css'
 import './styles/form.css'
 import './styles/button.css'
-import { useContext } from 'react'
-import { PropsContext } from './context/PropsContext'
 
 function App() {
+  const {email, password,setId, setIsLogin, setEmail, setPassword, setName,  setCiudad, setApellido, setDireccion, } = useContext(LoginContext);
+  const navegate = useNavigate()
   const emailObject = {
     titleClass:"app__form__sectionText__title",
     containerClass: "app__form__sectionText",
@@ -21,8 +24,23 @@ function App() {
   }
   const onClickHandler = (e)=>{
     e.preventDefault()
-    const {email, password} = useContext(PropsContext);
-    //llamada a la api
+    //llamado a la api que no está
+
+    const [user] = users.filter((user)=> user.username == email ? user : null)
+    if(user.password == password){
+      console.log("LOGUED")
+      setEmail(user.username)
+      setPassword(user.password)
+      setName(user.nombre)
+      setApellido(user.apellido)
+      setCiudad(user.ciudad)
+      setDireccion(user.direccion)
+      setIsLogin(true)
+      setId(user.id)
+      navegate("/inicio")
+    }else {
+      alert("error")
+    }
   }
   return (
     <div className="app">
@@ -42,7 +60,7 @@ function App() {
           <input type="checkbox" />
           <span className="app__form__sectionCheckbox__title">Recordar datos</span>
         </div>
-        <button className="app__form__button" id="button--login" onClick={onClickHandler}>Iniciar sesion</button>
+        <Button classNameButton="app__form__button" handleButton={onClickHandler}>Iniciar sesion</Button>
       </form>
       <Link to={"/singIn"} className='app__link--Register' > ¿No tienes una cuenta?¡Registrate Aquí! </Link>
     </div>

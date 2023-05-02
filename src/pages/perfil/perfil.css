@@ -5,7 +5,7 @@
   height: 100vh;
 }
 .perfilContainer{
-  margin-top: 90px;
+  margin-top: 150px;
   width: 70vw;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,14 @@
   border: none;
   outline: none;
   background-color: var(--color-primary-orange);
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.perfil__mensajes__button{
+  border: none;
+  outline: none;
+  background-color: var(--color-secundary-blue);
   height: 40px;
   border-radius: 10px;
   cursor: pointer;

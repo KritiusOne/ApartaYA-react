@@ -1,14 +1,17 @@
 .tableOptions{
+  
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   max-width: 100%;
+  min-width: 240px;
   margin-bottom: 20px;
   background-color: var(--color-white);
 }
 .tableOptions__header{
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: row;

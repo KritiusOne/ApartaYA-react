@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import { LoginContext } from '../../context/LoginContext'
 import { inputsFirstMapping, inputsSecondMapping } from '../../utils/typesInputs'
 import { validar, ExpRegulares, validarContraseña } from '../../utils/validacion'
@@ -24,7 +24,17 @@ export function RegistroInputs() {
   const handleReg = (e)=>{
     e.preventDefault()
     if(validar(ExpRegulares.nombre, ciudad) && validar(ExpRegulares.nombre, Apellido)){
-      //llamado a la api
+      useEffect(()=>{
+        async function getRegistro(){
+          try {
+            await fetch(/*llamada */).then(res => res.json())
+            
+          } catch (error) {
+            console.log(error)
+          }
+        }
+        getRegistro();
+      })
     }else{
       alert("La ciudad, el nombre y apellido son obligatorios")
     }

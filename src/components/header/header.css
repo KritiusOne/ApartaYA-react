@@ -50,9 +50,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  padding-right: 5px ;
 }
 .element--inicio{
   border-right:3px solid  var(--color-primary-orange);
+  text-decoration: none;
   text-decoration: none;
 }
 .title--inicio, .icon--inicio{

@@ -1,5 +1,8 @@
 .onlyTextOption{
-  display: inline-block;
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
   font-size: 24px;
 }
 .onlyTextOption__title{

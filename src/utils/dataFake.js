@@ -147,3 +147,31 @@ export const notificacionesRecientes = [
     imagen: "https://ejemplo.com/propiedad5.jpg"
   }
 ];
+
+export const users = [
+  {
+    id: 1,
+    username: "julio10489@gmail.com",
+    password: "123456Am",
+    nombre: "Julio David",
+    apellido: "Rodríguez Ureche",
+    ciudad: "Santa Marta",
+    direccion: "mz 1 c1 barrio A"
+  },{
+    id: 2,
+    username: "jairDeLaRosa@gmail.com",
+    password: "123456Am",
+    nombre: "Jair",
+    apellido: "De la rosa",
+    ciudad: "Santa Marta",
+    direccion: "mz 1 c1 barrio B"
+  },{
+    id: 3,
+    username: "Richarlison@gmail.com",
+    password: "123456Am",
+    nombre: "Richarlizon",
+    apellido: "no tengo",
+    ciudad: "Londres",
+    direccion: "mz 1 c1 barrio C"
+  },
+]

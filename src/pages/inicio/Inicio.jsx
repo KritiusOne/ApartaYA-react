@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { LoginContext } from '../../context/LoginContext'
 import { Header } from '../../components/header/Header'
 import { TableOptions } from '../../components/tableOptions/TableOptions'
 import { OptionList } from '../../components/tableOptions/optionList/OptionList'
@@ -13,15 +14,17 @@ import { Card } from '../../components/card/Card'
 import './inicio.css'
 
 export default function Inicio() {
+  const {name, Apellido} = useContext(LoginContext)
   const optionsPerfil = [
     'propiedad', 'agregar', 'editar', 'eliminar'
   ]
+  const nombreCompleto = name + ' ' + Apellido
   return (
     <div className='Inicio'>
       <Header />
       <div className='Inicio__container--columns'>
         <aside className="section--Inicio__leftColumn">
-          <TableOptions title={"Jair de la Rosa"} Icon={HiOutlinePhotograph}>
+          <TableOptions title={nombreCompleto} Icon={HiOutlinePhotograph}>
             {
               optionsPerfil.map((option, index)=><OnlyTextOption title={option} key={index} Icon={AiFillCheckSquare} />)
             }
